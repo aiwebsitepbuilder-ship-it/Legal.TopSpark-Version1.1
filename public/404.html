@@ -3,10 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirecting...</title>
+    <title>Top Spark Legal - Redirecting</title>
     <script>
-      // Automatically redirect 404 subpaths to the base URL on GitHub Pages
-      window.location.replace('./');
+      // Single Page Apps for GitHub Pages
+      // Redirects 404s back to the repository base URL
+      var pathSegments = window.location.pathname.split('/');
+      var repoSegment = 'Legal.TopSpark-Version1.1';
+      var repoIndex = pathSegments.indexOf(repoSegment);
+      var targetPath = repoIndex !== -1 ? '/' + repoSegment + '/' : '/';
+      window.location.replace(targetPath);
     </script>
   </head>
   <body>
